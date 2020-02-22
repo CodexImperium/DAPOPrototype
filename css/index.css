@@ -1,0 +1,137 @@
+
+body {
+    -webkit-touch-callout: none;                /* prevent callout to copy image, etc when tap to hold */
+    -webkit-text-size-adjust: none;             /* prevent webkit from resizing text to fit */
+    -webkit-user-select: none;                  /* prevent copy paste, to allow, change 'none' to 'text' */
+    font-family: system-ui, -apple-system, -apple-system-font, 'Segoe UI', 'Roboto', sans-serif;
+    font-size:12px;
+    height:100vh;
+    margin:0;
+    padding:0;
+    /* Padding to avoid the "unsafe" areas behind notches in the screen */
+    padding: env(safe-area-inset-top, 0px) env(safe-area-inset-right, 0px) env(safe-area-inset-bottom, 0px) env(safe-area-inset-right, 0px);
+    text-transform:uppercase;
+    width:100%;
+}
+
+#Logo{
+    width: 60%;
+    margin-top: 10px;
+    transform: translateX(33%);
+}
+
+
+#Bite{
+    border-radius: 10%;
+    width: 150px;
+    height: 130px;
+    margin-top: 60px;
+    background: #118b04;
+    border: none;
+    transform: translateX(98px) ;
+}
+
+#Bite2{
+    border-radius: 10%;
+    width: 150px;
+    height: 130px;
+    background: #118b04;
+    border: none;
+    transform: translateX(-56px) translateY(150px);
+}
+
+#MoskitoButton{
+    width: 55%;
+    margin: 10px;
+
+}
+
+#EyeButton{
+    width: 55%;
+    margin: 10px;
+
+}
+
+.button-group{
+    z-index: 0;
+    position: absolute;
+}
+
+.overlay{
+    background-color: black;
+    opacity: 0.5;
+    z-index: 0.1;
+    position: absolute;
+
+}
+
+.ripple{
+    display: inline-block;
+    width: 64px;
+    height: 64px;
+    position: relative;
+    top: 50%;
+    left: 40%;
+    margin-top: 250px;
+}
+
+.overlay h1{
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    padding-top: 5px;
+    padding-left: 20px;
+    padding-right: 30px;
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-bottom: 250px;
+
+}
+
+.ripple div{
+    position: absolute;
+    opacity: 1;
+    border-radius: 50%;
+    text-align: center;
+    border: 5px solid #85e200;
+    animation: ripple 1s cubic-bezier(0, 0.2,0.8,1) infinite;
+
+}
+
+.ripple div:nth-child(2){
+    animation-delay: -0.5s;
+}
+
+@keyframes ripple{
+
+    0%{
+        top: 28px;
+        left: 28px;
+        width: 0;
+        height: 0;
+        opacity: 1;
+    }
+
+    100%{
+        top: -1px;
+        left: -1px;
+        width: 58px;
+        height: 58px;
+        opacity: 0;
+    }
+}
+
+
+/* Landscape layout (with min-width) */
+@media screen and (min-aspect-ratio: 1/1) and (min-width:400px) {
+    .app {
+        background-position:left center;
+        padding:75px 0 75px 170px;  /* padding-top + padding-bottom + text area = image height */
+        margin:-90px 0 0 -198px;  /* offset vertical: half of image height */
+        /* offset horizontal: half of image width and text area width */
+    }
+
+
+}
+
+

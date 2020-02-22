@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Security-Policy" content="default-src &apos;self&apos; data: gap: https://ssl.gstatic.com &apos;unsafe-eval&apos;; style-src &apos;self&apos; &apos;unsafe-inline&apos;; media-src *; img-src &apos;self&apos; data: content:;">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <title>DAPO</title>
+</head>
+<body>
+
+<div class="button-group">
+    <div class="title-header">
+        <img src="img/New%20Logo.png" class="dapo-logo" id="Logo" alt="App-Logo">
+    </div>
+
+    <button class="bite-btn" id="Bite" >
+        <img src="img/white-mosquito.png" id="MoskitoButton" alt="Bite">
+    </button>
+
+    <button class="bite-btn" id="Bite2" >
+        <img src="img/white-eye.png" id="EyeButton" alt="Spot">
+    </button>
+</div>
+<div class="overlay" id="Preloader">
+    <div class="ripple"><div></div><div></div></div>
+    <h1>Fetching Data...</h1>
+</div>
+<script type="text/javascript" src="cordova.js"></script>
+<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="js/preloader.js"></script>
+<script type="text/javascript" src="js/button.js"></script>
+<script type="text/javascript" src="js/index.js"></script>
+</body>
+</html>
